@@ -1,37 +1,197 @@
-## Welcome to GitHub Pages
+<html>
+    <title>宅配便システム ver 0.1</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container d-flex">
+            <div class="row align-self-center w-100">
+                <div class="col-6 mx-auto">
+                    <div class="jumbotron">
+                        <form class="h-adr">
+                            <h2><label>宅配便システム ver 0.1</label></h2>
+                            <div class="form-group">
+                                <span class="p-country-name" style="display:none;">Japan</span>
+                                <h4><label for="postalCode1">〒</label></h4>
+                                <input id="postalCode1" type="text" class="p-postal-code form-control" maxlength="3" placeholder="郵便番号3桁">
+                                <input type="text" class="p-postal-code form-control" maxlength="4" placeholder="郵便番号4桁"><br>
 
-You can use the [editor on GitHub](https://github.com/usyee/hankyu/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+                                <h4><label for="postalCode1">住所</label></h4>
+                                <input id="region" type="text" class="p-region form-control" placeholder="都道府県" style="background-color:white" /><br>
+                                <input id="locality" type="text" class="p-locality form-control" placeholder="市区町村" style="background-color:white" /><br>
+                                <input type="text" class="p-street-address form-control" placeholder="番地" style="background-color:white" /><br>
+                                <input type="text" class="p-extended-address form-control" placeholder="詳細住所" style="background-color:white" />
+                            </div>
+                            <div class="form-group">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" name="expressCompany" type="radio" id="expressCompany1" value="택배회사1">
+                                    <label class="form-check-label" for="expressCompany1">阪急便 ヤマト</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" name="expressCompany" type="radio" id="expressCompany2" value="택배회사2">
+                                    <label class="form-check-label" for="expressCompany2">阪急便 郵便</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" name="expressCompany" type="radio" id="expressCompany3" value="택배회사2">
+                                    <label class="form-check-label" for="expressCompany3">ヤマト宅急便</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" name="expressCompany" type="radio" id="expressCompany4" value="택배회사2">
+                                    <label class="form-check-label" for="expressCompany4">郵便局</label>
+                                </div>
+                            </div>
+                            <hr class="my-4">
+                            <h4><label>結果</label></h4>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background-color:white">現在時刻</span>
+                                </div>
+                                <input id="currentTime" type="text" class="form-control" style="background-color:white" readonly>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background-color:white">サービス判定</span>
+                                </div>
+                                <input id="deliveryType" type="text" class="form-control" style="background-color:white" readonly>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background-color:white">日数判定</span>
+                                </div>
+                                <input id="deliveryDay" type="text" class="form-control" style="background-color:white" readonly>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" style="background-color:white">指定可能日</span>
+                                  </div>
+                                <input id="possibleDate" type="text" class="form-control" style="background-color:white" readonly>
+                            </div>
+                            <hr class="my-4">
+                            <h4><label>金額表</label></h4>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background-color:white">送料（税抜）</span>
+                                </div>
+                                <input id="shippingPrice" type="text" class="form-control" style="background-color:white" readonly>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" style="background-color:white">クール便（税抜）</span>
+                                  </div>
+                                <input id="shippingAddPrice" type="text" class="form-control" style="background-color:white" readonly>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background-color:white">送料（税込）</span>
+                                </div>
+                                <input id="shippingPriceWithTax" type="text" class="form-control" style="background-color:white" readonly>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" style="background-color:white">クール便（税込）</span>
+                                  </div>
+                                <input id="shippingAddPriceWithTax" type="text" class="form-control" style="background-color:white" readonly>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background-color:white">金額（税抜）</span>
+                                </div>
+                                <input id="shippingPriceWithTax" type="text" class="form-control" style="background-color:white" readonly>
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" style="background-color:white">金額（税込）</span>
+                                  </div>
+                                <input id="shippingAddPriceWithTax" type="text" class="form-control" style="background-color:white" readonly>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" style="background-color:white">税込金額</span>
+                                </div>
+                                <input id="totalShippingPrice" type="text" class="form-control" style="background-color:white" readonly>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        let serviceAddress = ['大阪府茨木市','奈良県生駒郡斑鳩町','大阪府大阪市東淀川区','兵庫県三田市']; 	
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+        $('[name="expressCompany"]').click(function() {
+            let region = $('#region').val();
+            let locality = $('#locality').val();
+            let expressConpany = null;
 
-### Markdown
+            if (region === '' && locality === '') {
+                alert('住所を先に入力してください。');
+                $('input[type="radio"]').prop('checked', false);
+            } else {
+                expressConpany = $('[name="expressCompany"]:checked').val();
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+                calculatePrice(region, locality, expressConpany);
+            }
+        });
 
-```markdown
-Syntax highlighted code block
+        function calculatePrice(region, locality, expressConpany) {
+            let address = region + locality;
+            let price = (expressConpany === '阪急便 ヤマト') ? 600 : 2000;
+            let deliveryType = (serviceAddress.includes(address)) ? "サービスエリア" : "地域配送";
+            let deliveryDay = 0;
 
-# Header 1
-## Header 2
-### Header 3
+            if (deliveryType === "サービスエリア") {
+                deliveryDay = 1;
+            } else {
+                // 기본은 5일로 설정해둠.
+                // 만약 지역별로 다를 경우 시간을 설정해두셈.
+                deliveryDay = 2;
+            }
 
-- Bulleted
-- List
+            $('#deliveryType').val(deliveryType);
+            $('#deliveryDay').val(deliveryDay + "日");
 
-1. Numbered
-2. List
+            //여부턴 너가 계산해서 값 추가하셈.
+            let shippingPrice = price;
+            let shippingAddPrice = 300;
+            let shippingPriceWithTax = price * 1.1;
+            let shippingAddPriceWithTax = 330;
+            let totalShippingPrice = shippingPriceWithTax + shippingAddPriceWithTax;
 
-**Bold** and _Italic_ and `Code` text
+            $('#shippingPrice').val(shippingPrice);
+            $('#shippingAddPrice').val(shippingAddPrice);
 
-[Link](url) and ![Image](src)
-```
+            $('#shippingPriceWithTax').val(shippingPriceWithTax);
+            $('#shippingAddPriceWithTax').val(shippingAddPriceWithTax);
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+            $('#totalShippingPrice').val(totalShippingPrice);
+        }
 
-### Jekyll Themes
+        function currentTime() {
+            let time = new Date();
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/usyee/hankyu/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+            let calendar = time.getFullYear() + "/" + (time.getMonth()+1) + "/" + time.getDate()
+            let currentHours = setZero(time.getHours());
+            let currentMinute = setZero(time.getMinutes());
+            let currentSecond = setZero(time.getSeconds());
 
-### Support or Contact
+            let meridiem = (currentHours >= 12) ? 'PM' : 'AM';
+            currentHours = (meridiem === 'PM') ? setZero(currentHours) - 12 : currentHours;
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+            let resultTime = calendar + " " + currentHours + ":" + currentMinute + ":" + currentSecond + " " + meridiem;
+
+            return resultTime;
+        }
+
+        function setZero(value) {
+            let result = '';
+            let valueToString = value.toString();
+
+            if (valueToString.length < 2) {
+                result += '0';
+            }
+
+            return result + valueToString;
+        }
+        
+        setInterval(function() {
+            $('#currentTime').val(currentTime());
+        }, 1000);
+    </script>
+</html>
