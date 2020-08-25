@@ -23,71 +23,71 @@
                                 <input id="postalCode1" type="number" inputmode="numeric" pattern="[0-9]*" class="p-postal-code form-control" maxlength="3" placeholder="530">
                                 <input type="number" inputmode="numeric" pattern="[0-9]*" class="p-postal-code form-control" maxlength="4" placeholder="8350"><br>
 
-                                <br><h4><label for="postalCode1">상세주소</label></h4>
-                                <input id="region" type="text" class="p-region form-control" placeholder="Region" style="background-color:white"  /><br>
-                                <input id="locality" type="text" class="p-locality form-control" placeholder="Locality" style="background-color:white"  /><br>
-                                <input type="text" class="p-street-address form-control" placeholder="Street Address" style="background-color:white"  /><br>
-                                <input type="text" class="p-extended-address form-control" placeholder="Extended Address" style="background-color:white"  />
+                                <br><h4><label for="postalCode1">住所</label></h4>
+                                <input id="region" type="text" class="p-region form-control" placeholder="都道府県" style="background-color:white"  /><br>
+                                <input id="locality" type="text" class="p-locality form-control" placeholder="市区町村" style="background-color:white"  /><br>
+                                <input type="text" class="p-street-address form-control" placeholder="番地" style="background-color:white"  /><br>
+                                <input type="text" class="p-extended-address form-control" placeholder="詳細住所" style="background-color:white"  />
                             </div>
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" name="expressCompany" type="radio" id="expressCompany1"" value="택배회사1">
-                                    <label class="form-check-label" for="expressCompany1">택배회사1</label>
+                                    <label class="form-check-label" for="expressCompany1">阪急便</label>
                                 </div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" name="expressCompany" type="radio" id="expressCompany2" value="택배회사2">
-                                    <label class="form-check-label" for="expressCompany2">택배회사2</label>
+                                    <label class="form-check-label" for="expressCompany2">ヤマト便</label>
                                 </div>
                             </div>
                             <hr class="my-4">
-                            <h4><label>최종결과</label></h4>
+                            <h4><label>結果</label></h4>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" style="background-color:white">현재시간</span>
+                                  <span class="input-group-text" style="background-color:white">現在時刻</span>
                                 </div>
                                 <input id="currentTime" type="text" class="form-control" style="background-color:white" readonly>
                             </div>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" style="background-color:white">서비스판정</span>
+                                  <span class="input-group-text" style="background-color:white">サービス判定</span>
                                 </div>
                                 <input id="deliveryType" type="text" class="form-control" style="background-color:white" readonly>
                             </div>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" style="background-color:white">일수 판정</span>
+                                  <span class="input-group-text" style="background-color:white">所要日数</span>
                                 </div>
                                 <input id="deliveryDay" type="text" class="form-control" style="background-color:white" readonly>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" style="background-color:white">지정가능일수</span>
+                                    <span class="input-group-text" style="background-color:white">指定可能日</span>
                                   </div>
                                 <input id="possibleDate" type="text" class="form-control" style="background-color:white" readonly>
                             </div>
                             <hr class="my-4">
-                            <h4><label>최종금액</label></h4>
+                            <h4><label>最終金額</label></h4>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" style="background-color:white">세전 송료</span>
+                                  <span class="input-group-text" style="background-color:white">送料（税抜）</span>
                                 </div>
                                 <input id="shippingPrice" type="text" class="form-control" style="background-color:white" readonly>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" style="background-color:white">세전 추가송료</span>
+                                    <span class="input-group-text" style="background-color:white">クール便（税抜）</span>
                                   </div>
                                 <input id="shippingAddPrice" type="text" class="form-control" style="background-color:white" readonly>
                             </div>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" style="background-color:white">세후 송료</span>
+                                  <span class="input-group-text" style="background-color:white">送料（税込）</span>
                                 </div>
                                 <input id="shippingPriceWithTax" type="text" class="form-control" style="background-color:white" readonly>
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" style="background-color:white">세후 추가송료</span>
+                                    <span class="input-group-text" style="background-color:white">クール便（税込）</span>
                                   </div>
                                 <input id="shippingAddPriceWithTax" type="text" class="form-control" style="background-color:white" readonly>
                             </div>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                  <span class="input-group-text" style="background-color:white">최종금액</span>
+                                  <span class="input-group-text" style="background-color:white">最終金額</span>
                                 </div>
                                 <input id="totalShippingPrice" type="text" class="form-control" style="background-color:white" readonly>
                             </div>
@@ -107,7 +107,7 @@
             let expressConpany = null;
 
             if (region === '' && locality === '') {
-                alert('주소를 먼저 입력하세요.');
+                alert('住所を先に入力してください。');
                 $('input[type="radio"]').prop('checked', false);
             } else {
                 expressConpany = $('[name="expressCompany"]:checked').val();
@@ -119,28 +119,28 @@
         function calculatePrice(region, locality, expressConpany) {
             let address = region + locality;
             let price = (expressConpany === '택배회사1') ? 1000 : 2000;
-            let deliveryType = (serviceAddress.includes(address)) ? "서비스 지역" : "권외 지역";
+            let deliveryType = (serviceAddress.includes(address)) ? "サービスエリア" : "地域配送";
             let deliveryDay = null;
             for (let i = 0; i < serviceAddress.length; i++) {
                 if (address.includes(serviceAddress[i])) {
-                    deliveryType = "서비스지역";
+                    deliveryType = "サービスエリア";
 
                     break;
                 } else {
-                    deliveryType = "권외 지역";
+                    deliveryType = "地域配送";
                 }
             }
 
-            if (deliveryType === "서비스 지역") {
+            if (deliveryType === "サービスエリア") {
                 deliveryDay = 1;
             } else {
                 // 기본은 5일로 설정해둠.
                 // 만약 지역별로 다를 경우 시간을 설정해두셈.
-                deliveryDay = 5;
+                deliveryDay = 2;
             }
 
             $('#deliveryType').val(deliveryType);
-            $('#deliveryDay').val(deliveryDay + "일");
+            $('#deliveryDay').val(deliveryDay + "日");
 
             //여부턴 너가 계산해서 값 추가하셈.
             let shippingPrice = price;
