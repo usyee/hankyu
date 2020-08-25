@@ -1,5 +1,5 @@
 <html>
-    <title>성원이의 은밀한 장난감</title>
+    <title>阪急　宅配便システム</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
@@ -13,18 +13,21 @@
                 <div class="col-6 mx-auto">
                     <div class="jumbotron">
                         <form class="h-adr">
-                            <h2><label>성원이의 은밀한 장난감</label></h2>
+                            <h2><label>阪急　宅配便システム</label></h2>
+                            
+                            <br><input type="reset">
+
                             <div class="form-group">
                                 <span class="p-country-name" style="display:none;">Japan</span>
-                                <h4><label for="postalCode1">〒</label></h4>
-                                <input id="postalCode1" type="text" class="p-postal-code form-control" maxlength="3" placeholder="Postal Code 1">
-                                <input type="text" class="p-postal-code form-control" maxlength="4" placeholder="Postal Code 2"><br>
+                                <br><h4><label for="postalCode1">〒</label></h4>
+                                <input id="postalCode1" type="number" class="p-postal-code form-control" maxlength="3" placeholder="530">
+                                <input type="number" class="p-postal-code form-control" maxlength="4" placeholder="8350"><br>
 
-                                <h4><label for="postalCode1">상세주소</label></h4>
-                                <input id="region" type="text" class="p-region form-control" placeholder="Region" style="background-color:white" readonly /><br>
-                                <input id="locality" type="text" class="p-locality form-control" placeholder="Locality" style="background-color:white" readonly /><br>
-                                <input type="text" class="p-street-address form-control" placeholder="Street Address" style="background-color:white" readonly /><br>
-                                <input type="text" class="p-extended-address form-control" placeholder="Extended Address" style="background-color:white" readonly />
+                                <br><h4><label for="postalCode1">상세주소</label></h4>
+                                <input id="region" type="text" class="p-region form-control" placeholder="Region" style="background-color:white"  /><br>
+                                <input id="locality" type="text" class="p-locality form-control" placeholder="Locality" style="background-color:white"  /><br>
+                                <input type="text" class="p-street-address form-control" placeholder="Street Address" style="background-color:white"  /><br>
+                                <input type="text" class="p-extended-address form-control" placeholder="Extended Address" style="background-color:white"  />
                             </div>
                             <div class="form-group">
                                 <div class="form-check form-check-inline">
@@ -66,7 +69,7 @@
                                 <div class="input-group-prepend">
                                   <span class="input-group-text" style="background-color:white">세전 송료</span>
                                 </div>
-                                <input id="shippingPrice"" type="text" class="form-control" style="background-color:white" readonly>
+                                <input id="shippingPrice" type="text" class="form-control" style="background-color:white" readonly>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" style="background-color:white">세전 추가송료</span>
                                   </div>
@@ -76,7 +79,7 @@
                                 <div class="input-group-prepend">
                                   <span class="input-group-text" style="background-color:white">세후 송료</span>
                                 </div>
-                                <input id="shippingPriceWithTax"" type="text" class="form-control" style="background-color:white" readonly>
+                                <input id="shippingPriceWithTax" type="text" class="form-control" style="background-color:white" readonly>
                                 <div class="input-group-prepend">
                                     <span class="input-group-text" style="background-color:white">세후 추가송료</span>
                                   </div>
@@ -95,7 +98,8 @@
         </div>
     </body>
     <script type="text/javascript">
-        let serviceAddress = ['大阪府'];
+        let serviceAddress = ['大阪府','兵庫県明石市','兵庫県明石市','兵庫県芦屋市','兵庫県尼崎市','兵庫県伊丹市','兵庫県小野市','兵庫県加古川市','兵庫県加古郡','兵庫県川西市','兵庫県川辺郡','兵庫県神戸市','兵庫県丹波篠山市','兵庫県三田市','兵庫県高砂市','兵庫県宝塚市','兵庫県西宮市','兵庫県三木市','兵庫県姫路市','京都府宇治市','京都府乙訓郡','京都府木津川市','京都府京都市','京都府京田辺市','京都府久世郡','京都府城陽市','京都府相楽郡精華町','京都府綴喜郡','京都府長岡京市','京都府向日市','京都府八幡市','奈良県生駒市','奈良県生駒郡','奈良県香芝市','奈良県橿原市','奈良県葛城市',
+'和歌山県和歌山市','滋賀県守山市','滋賀県草津市','滋賀県大津市','奈良県大和高田市','奈良県大和郡山市','奈良県奈良市','奈良県天理市','奈良県磯城郡','奈良県桜井市','奈良県北葛城郡'];
 
         $('[name="expressCompany"]').click(function() {
             let region = $('#region').val();
@@ -185,4 +189,5 @@
             $('#currentTime').val(currentTime());
         }, 1000);
     </script>
+    
 </html>
