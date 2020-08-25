@@ -118,7 +118,7 @@
 
         function calculatePrice(region, locality, expressConpany) {
             let address = region + locality;
-            let price = (expressConpany === '택배회사1') ? 1000 : 2000;
+            let price = (expressConpany === '택배회사1') ? 600 : 800;
             let deliveryType = (serviceAddress.includes(address)) ? "サービスエリア" : "地域配送";
             let deliveryDay = null;
             for (let i = 0; i < serviceAddress.length; i++) {
